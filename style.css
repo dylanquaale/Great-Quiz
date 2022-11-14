@@ -19,7 +19,7 @@ body{
 .outer-container {
     padding: 10px;
     border-radius: 3px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,11 +31,31 @@ body{
     border-radius: 3px;
 }
 
+.inner-container {
+    background: grey;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.quiz-intro {
+    color: black;
+    margin-bottom: 10vh;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: block;
+}
 
 
 .questions-screen {
     color:black;
     font-family: monospace;
+    display: none;
+    /* change display to block to see question on home screen */
 }
 
 
