@@ -2,7 +2,6 @@ var startButton = document.getElementById("start-button");
 
 
 
-
 // list of questions here
 // Timer? Start it up here
 
