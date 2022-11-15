@@ -1,7 +1,7 @@
 var startButton = document.getElementById("start-button");
-
-
-
+var questionElements = document.getElementById('question-container');
+var topScores = document.getElementById('btn-scores');
+var timeLeft = document.getElementById('timer');
 // list of questions here
 // Timer? Start it up here
 
