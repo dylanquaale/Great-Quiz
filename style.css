@@ -58,7 +58,7 @@ body{
 .question-container {
     color:black;
     font-family: monospace;
-    display: block;
+    display: none;
     /* change display to block to see question on home screen */
 }
 
