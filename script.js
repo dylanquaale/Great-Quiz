@@ -2,37 +2,49 @@ var startButton = document.getElementById("start-button");
 var questionElements = document.getElementById('quiz');
 var topScores = document.getElementById('btn-score');
 var timeLeft = document.getElementById('timer');
+var seconds = 90;
+var highScore = 0;
 var index = 0;
 var questions = [
     {
-        question: '1.Which of the following methods is used to access HTML elements using Javscript?',
+        question: '1. Which of the following methods is used to access HTML elements using Javscript?',
         choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
         answer: 'Both A and B'
     }, 
     {
-        question: '2.Which of the following methods is used to access HTML elements using Javscript?',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'Both A and B'
+        question: '2. Javascript is an ______ language?',
+        choices:['Object-Oriented','Object-Based','Both A and B','procedural'],
+        answer: 'Object-Oriented'
     }, 
     {
-        question: '3.Which of the following methods is used to access HTML elements using Javscript?',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'Both A and B'
+        question: '3. How can a database type be declared to be a constant type?',
+        choices:['var','const','let','none of the above'],
+        answer: 'const'
     }, 
     {
-        question: '4.Which of the following methods is used to access HTML elements using Javscript?',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'Both A and B'
+        question: '4. What keyword is used to check wether a given property is valid or not?',
+        choices:['lies','exist','is in','in'],
+        answer: 'in'
     }, 
     {
-        question: '5.Which of the following methods is used to access HTML elements using Javscript?',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'Both A and B'
+        question: '5. What does the Javascript debugger statement do?',
+        choices:['It will debug all the errors in the program at runtime','it acts as a breakpoint in the program','Both A and B','none of the above'],
+        answer: 'it acts as a breakpoint in the program'
     }, 
     {
-        question: '6.Which of the following methods is used to access HTML elements using Javscript?',
-        choices:['getElementById','getElementsByClassName','Both A and B','none of the above'],
-        answer: 'Both A and B'
+        question: '6. Method prompt contain...... Number of parameters?',
+        choices:['1','2','3','0'],
+        answer: '2'
+    }, 
+    {
+        question: '7. Javascript file has an extension of?',
+        choices:['.java','.js','.javascript','.xml'],
+        answer: '.js'
+    }, 
+    {
+        question: '8. Function is used to parse a string to Int:',
+        choices:['Integer.parse','Int.Parse','Parse.Int','none of the above'],
+        answer: 'Int.Parse'
     }, 
     //list of questions loop
     
@@ -63,19 +75,59 @@ function askQuestion() {
         button.setAttribute('value', choice);
         button.addEventListener("click", function(){
         if(this.value !== questions[index].answer){
-            console.log('wrong')
-        } else {console.log('right')}
+            seconds -= 5
+            highScore -= 5
+            console.log('wrong') 
+        //     var secondsTimer = seconds,
+        //     display = document.querySelector('#time');
+        // startTimer(secondsTimer, display);
+        } else {
+            seconds += 5
+            highScore += 5
+            console.log('right')}
         index++;
+        if (index == 8){
+            alert ('HighScore: ' +  highScore);
+            window.location.href = "index.html";
+        }
         askQuestion();
-        });
 
+    });
+
+    
         
         document.getElementById('answer-buttons').appendChild(button);
     })
 
 };
+function startTimer(duration, display) {
+    var timer = duration //seconds;
+    setInterval(function () {
+        seconds = parseInt(timer , 10)
+        display.textContent = seconds;
 
-    // List of questions should exist
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+   var secondsTimer = seconds,
+        display = document.querySelector('#time');
+    startTimer(secondsTimer, display);
+};
+
+
+   
+
+// after questions are done send user to highscores page 
+// 
+
+
+
+
+// List of questions should exist
 //questionElements.addEventListener('click', function() {
 
 //})
