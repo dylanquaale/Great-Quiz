@@ -33,12 +33,14 @@ body{
 
 .inner-container {
     background: grey;
-    height: 100%;
-    width: 50%;
+    height: 70%;
+    width: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 5px;
+    padding: 5px 10px;
 
 }
 
@@ -49,15 +51,31 @@ body{
     margin-right: 10%;
     margin-left: 10%;
     display: block;
+    padding: 5px 10px;
 }
 
 
-.questions-screen {
+.question-container {
     color:black;
     font-family: monospace;
-    display: none;
+    display: block;
     /* change display to block to see question on home screen */
 }
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: blueviolet;
+    border-radius: 5px;
+    outline: none;
+}
+
+
 
 
 
