@@ -11,7 +11,7 @@
   <body>
     <div class="outer-container">
       <div class="top-bar">
-        <button class="btn-scores">Highscores</button>
+        <button class="btn">Highscores</button>
         <p class="timer">30</p>
       </div>
     </div>
@@ -24,18 +24,11 @@
       </header>
       <!--quiz section-->
       <main>
-        <div class="question-container">
-          <h2>
-            Which of the following methods is used to access HTML elements using
-            Javscript?
+        <div class="question-container hide" id="quiz">
+          <h2 id="question-text">
           </h2>
           <div id="answer-buttons" class="btn-grid">
-            <button class="btn">getElementbyId()</button>
-            <button class="btn">getElementsByClassName()</button>
-            <button class="btn">Both A and B</button>
-            <!--correct answer-->
-            <button class="btn">None of the above</button>
-            <button id="next-btn" class="next-btn btn hide">
+          
           </div>
         </div>
       </main>
