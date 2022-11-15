@@ -1,6 +1,6 @@
 var startButton = document.getElementById("start-button");
 var questionElements = document.getElementById('question-container');
-var topScores = document.getElementById('btn-scores');
+var topScores = document.getElementById('btn-score');
 var timeLeft = document.getElementById('timer');
 // list of questions here
 // Timer? Start it up here
@@ -13,7 +13,9 @@ function startQuiz() {
     console.log("start");
 
     // List of questions should exist
+questionElements.addEventListener('click', function() {
 
+})
     // LOOP?
     // go to question 1
     // Display question 1
