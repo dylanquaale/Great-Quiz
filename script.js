@@ -92,6 +92,10 @@ function askQuestion() {
         }
         askQuestion();
 
+        //if (highScore > parseInt(localStorage.getItem('highScore'), 10)) {
+            localStorage.setItem('highScore', score);
+          }
+
     });
 
     
