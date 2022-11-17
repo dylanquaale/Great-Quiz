@@ -4,9 +4,7 @@ Class Quiz
 
 ## Description
 
-This was a password generator challenge.
-Made for employees to be able to create a safe and secure password.
-In this project it includes functions, if statements, for statements push, variables, random generator.
+
 
 ### Installation
 
