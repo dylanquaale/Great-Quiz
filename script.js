@@ -2,6 +2,8 @@ var startButton = document.getElementById("start-button");
 var questionElements = document.getElementById('quiz');
 var topScores = document.getElementById('btn-score');
 var timeLeft = document.getElementById('timer');
+var timer = document.getElementById("start-timer");
+var answer = document.getElementById('answer-buttons');
 var seconds = 90;
 var highScore = 0;
 var index = 0;
@@ -97,7 +99,7 @@ function askQuestion() {
     })
 
 });
-function startTimer(duration, display) {}
+function startTimer(duration, display) {
     var timer = duration //seconds;
     setInterval(function () {
         seconds = parseInt(timer , 10)
@@ -108,12 +110,13 @@ function startTimer(duration, display) {}
         }
     }, 1000);
 }
+}
 
-// window.onload = function () {
-//    var secondsTimer = seconds,
-//         display = document.querySelector('#time');
-//     startTimer(secondsTimer, display);
-// }
+window.onload = function () {
+   var secondsTimer = seconds,
+        display = document.querySelector('#time');
+    startTimer(secondsTimer, display);
+}
 
 
 
