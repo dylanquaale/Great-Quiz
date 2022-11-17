@@ -97,7 +97,7 @@ function askQuestion() {
     })
 
 });
-function startTimer(duration, display) {
+function startTimer(duration, display) {}
     var timer = duration //seconds;
     setInterval(function () {
         seconds = parseInt(timer , 10)
@@ -109,11 +109,11 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
-   var secondsTimer = seconds,
-        display = document.querySelector('#time');
-    startTimer(secondsTimer, display);
-}
+// window.onload = function () {
+//    var secondsTimer = seconds,
+//         display = document.querySelector('#time');
+//     startTimer(secondsTimer, display);
+// }
 
 
 
