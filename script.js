@@ -1,4 +1,3 @@
-
 var startButton = document.getElementById("start-button");
 var questionElements = document.getElementById('quiz');
 var topScores = document.getElementById('btn-score');
