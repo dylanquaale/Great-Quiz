@@ -51,7 +51,7 @@ var questions = [
 ]
 
 
-// Timer? Start it up here
+// startTo my quiz
 
 startButton.addEventListener("click", function(){
     startQuiz();
@@ -65,7 +65,9 @@ function startQuiz() {
     askQuestion()
 
 };  
-// need to make an if statement for when we are done with the questions
+// this is where questions and answers are looped through
+//also where the I have my highScore adding and subtracting starting line 78
+//line 78 subtracts 5 for wrong answer
 function askQuestion() {
     document.getElementById('question-text').textContent = questions[index].question;
     document.getElementById('answer-buttons').innerHTML = ''
@@ -81,11 +83,12 @@ function askQuestion() {
         //     var secondsTimer = seconds,
         //     display = document.querySelector('#time');
         // startTimer(secondsTimer, display);
+        //adding 10 for the correct answer selected 
         } else {
             seconds += 10
             highScore += 10
             console.log('right')}
-        index++;
+        index++; //my alert window you will see at the end of the quiz
         if (index == 8){
             alert ('HighScore: ' +  highScore);
             window.location.href = "index.html";
@@ -100,6 +103,7 @@ function askQuestion() {
     })
 
 };
+//this is how I ended up makinh my timer
 function startTimer(duration, display) {
     var timer = duration //seconds;
     setInterval(function () {
