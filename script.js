@@ -78,9 +78,9 @@ function askQuestion() {
             seconds -= 5
             highScore -= 5
             console.log('wrong') 
-        //     var secondsTimer = seconds,
-        //     display = document.querySelector('#time');
-        // startTimer(secondsTimer, display);
+            var secondsTimer = seconds,
+            display = document.querySelector('#time');
+        startTimer(secondsTimer, display);
         } else {
             seconds += 5
             highScore += 5
@@ -91,19 +91,12 @@ function askQuestion() {
             window.location.href = "index.html";
         }
         askQuestion();
-
-        //if (highScore > parseInt(localStorage.getItem('highScore'), 10)) {
-            localStorage.setItem('highScore', score);
-          }
-
-    });
-
     
         
         document.getElementById('answer-buttons').appendChild(button);
     })
 
-};
+});
 function startTimer(duration, display) {
     var timer = duration //seconds;
     setInterval(function () {
@@ -120,36 +113,9 @@ window.onload = function () {
    var secondsTimer = seconds,
         display = document.querySelector('#time');
     startTimer(secondsTimer, display);
-};
-
-
-   
-
-// after questions are done send user to highscores page 
-// 
+}
 
 
 
 
-// List of questions should exist
-//questionElements.addEventListener('click', function() {
 
-//})
-    // LOOP?
-    // go to question 1
-    // Display question 1
-    // Wait for user to choose answer <- probably where you'll end up adding event listener(s)
-    
-    // if user chose correct answer
-        // Acknowledge correct answer (sound? display "correct!" message? Up to you)
-    
-        // Otherwise
-        // Acknowledge incorrect answer and punish by subtracting time from timer
-    // next question and repeat
-    // LOOP?
-
-    // after all questions are done
-        // send user to high scores page and ask them to type their name
-        // when submitted, 
-            // add name to localstorage
-            // dislpay list of high scores
