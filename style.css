@@ -1,4 +1,4 @@
-
+/* css pretty straightforward follows me html and JS */
 
 *{
     margin: 0;
@@ -21,7 +21,7 @@ body{
     background-color: blueviolet;
     font-weight: bold;
 }
-
+/* what the quiz is held in */
 .outer-container {
     padding: 10px;
     border-radius: 3px;
@@ -37,7 +37,7 @@ body{
     border-radius: 3px;
     
 }
-
+/* quiz container */
 .inner-container {
     background: #e8e9eb;
     height: 70%;
